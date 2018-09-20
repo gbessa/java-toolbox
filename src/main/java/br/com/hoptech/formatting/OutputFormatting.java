@@ -1,4 +1,4 @@
-package br.com.hoptech.io;
+package br.com.hoptech.formatting;
 
 import java.util.Scanner;
 
