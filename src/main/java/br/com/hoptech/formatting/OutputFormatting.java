@@ -7,7 +7,14 @@ public class OutputFormatting {
     public static void main(String[] args) {
 	
         tableFormat();
+        tabuada(10);
 
+    }
+
+    private static void tabuada(int multiplier) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.printf("%d x %d = %d\n", multiplier, i, multiplier*i);
+        }
     }
 
     /*
