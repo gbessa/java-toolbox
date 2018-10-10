@@ -25,33 +25,12 @@ public class JavaBitSet {
 	    int par1 = scan.nextInt();
 	    int par2 = scan.nextInt();
 	    
-	    switch (operation) {
-	    case "AND":
-		bn.get(par1-1).and(bn.get(par2-1));
+	    if (operation == "AND") bn.get(par1-1).and(bn.get(par2-1));
+	    if (operation == "OR") bn.get(par1-1).or(bn.get(par2-1));
+	    if (operation == "XOR") bn.get(par1-1).xor(bn.get(par2-1));
+	    if (operation == "FLIP") bn.get(par1 - 1).flip(par2);;
+	    if (operation == "SET") bn.get(par1 - 1).set(par2);
 		
-		break;
-	    case "OR":
-		bn.get(par1-1).or(bn.get(par2-1));
-		
-		break;
-	    case "XOR":
-		bn.get(par1-1).xor(bn.get(par2-1));
-		
-		break;
-	    case "FLIP":
-		bn.get(par1 - 1).flip(par2);;
-		
-		break;
-		
-	    case "SET":
-		bn.get(par1 - 1).set(par2);
-		
-		break;
-		
-	    default:
-		break;
-	    }
-	    
 	    result += setBits(bn.get(0)) + " " + setBits(bn.get(1)) + "\n"; 
 	}
 	
