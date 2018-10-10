@@ -1,5 +1,7 @@
 package br.com.hoptech.collections;
 
+import java.util.Comparator;
+
 public class ComparableAndComparator {
 
     public static void main(String[] args) {
@@ -43,4 +45,27 @@ class Student implements Comparable<Student>{
 	return this.id - ((Student) otherStudent).getId();
     }
 
+}
+
+class Checker implements Comparator<Player> {
+
+    public int compare(Player one, Player other) {
+	int firstCompare = (other.score - one.score);
+	if (firstCompare < 0) {
+	    return -1;
+	} else if (firstCompare > 0) {
+	    return 1;
+	}
+	return one.name.compareTo(other.name);
+    }  
+}
+
+class Player{
+    String name;
+    int score;
+
+    Player(String name, int score){
+	this.name = name;
+	this.score = score;
+    }
 }
