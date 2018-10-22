@@ -1,4 +1,4 @@
-package br.com.hoptech.core;
+package br.com.hoptech.reflection;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
