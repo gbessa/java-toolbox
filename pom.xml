@@ -18,6 +18,19 @@
 	   <version>0.0.3</version>
 	</dependency>
 
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>3.17</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.json/json -->
+	<dependency>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	    <version>20180813</version>
+	</dependency>
+		
   </dependencies>
   
 </project>
