@@ -1,9 +1,6 @@
 package br.com.hoptech.designpatterns;
 
 public class Adapter {
-}
-
-class ClasseA {
 
     public static void main(String[] args) {
         //Before
