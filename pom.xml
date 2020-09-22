@@ -1,45 +1,57 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>br.com.hoptech</groupId>
-  <artifactId>java-toolbox</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-	 <properties>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.3.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>br.com.hoptech</groupId>
+	<artifactId>java-toolbox</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.12</java.version>
+		<java.version>1.8</java.version>
 
-		 <maven.compiler.source>1.12</maven.compiler.source>
-		 <maven.compiler.target>1.12</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-  
-  <dependencies>
-  
-	 <dependency>
-	   <groupId>org.jamel.dbf</groupId>
-	   <artifactId>dbf-reader</artifactId>
-	   <version>0.0.3</version>
-	</dependency>
 
-	<dependency>
-	    <groupId>org.apache.poi</groupId>
-	    <artifactId>poi</artifactId>
-	    <version>3.17</version>
-	</dependency>
+	<dependencies>
 
-<!--	<dependency>-->
-<!--	  <groupId>org.springframework.boot</groupId>-->
-<!--	  <artifactId>spring-boot-starter-test</artifactId>-->
-<!--	  <scope>test</scope>-->
-<!--	</dependency>-->
+		<dependency>
+			<groupId>org.jamel.dbf</groupId>
+			<artifactId>dbf-reader</artifactId>
+			<version>0.0.3</version>
+		</dependency>
 
-	<!-- https://mvnrepository.com/artifact/org.json/json -->
-	<dependency>
-	    <groupId>org.json</groupId>
-	    <artifactId>json</artifactId>
-	    <version>20180813</version>
-	</dependency>
-		
-  </dependencies>
-  
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<!--			<exclusions>-->
+			<!--				<exclusion>-->
+			<!--					<groupId>org.junit.vintage</groupId>-->
+			<!--					<artifactId>junit-vintage-engine</artifactId>-->
+			<!--				</exclusion>-->
+			<!--			</exclusions>-->
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20180813</version>
+		</dependency>
+
+	</dependencies>
+
 </project>
