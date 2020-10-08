@@ -1,8 +1,11 @@
 package br.com.hoptech.java8;
 
 import java.security.InvalidParameterException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
+import java.util.function.Predicate;
 
 public class Optionals {
 
@@ -36,6 +39,7 @@ public class Optionals {
         System.out.println(toInt("3"));
         System.out.println(toInt("3").getAsInt());
         System.out.println(toInt("casa3").orElse(0));
+
     }
 
     // Optional com tipos primitivos
@@ -60,5 +64,28 @@ public class Optionals {
             return Optional.empty();
         }
     }
+
+    private boolean isLearFactWithDocuments(Fact fact) {
+        return fact.getDocumentList() != null &&
+                !fact.getDocumentList().isEmpty();
+    }
+
+    private Optional<Fact> getFactWithCondition(List<Fact> facts, Predicate<Fact> condition) {
+        return facts.stream().filter(
+                fact -> condition.test(fact)
+        ).findAny();
+    }
+
+
+}
+
+class Fact {
+
+    public List<Document> getDocumentList() {
+        return new ArrayList<Document>();
+    }
+}
+
+class Document {
 
 }
