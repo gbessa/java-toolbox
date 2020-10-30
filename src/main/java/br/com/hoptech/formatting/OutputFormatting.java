@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class OutputFormatting {
 
     public static void main(String[] args) {
-	
-        tableFormat();
+
         tabuada(10);
+        //tableFormat();
 
     }
 

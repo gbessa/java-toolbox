@@ -1,4 +1,4 @@
-package br.com.hoptech;
+package br.com.hoptech.exceptions;
 
 import java.io.IOException;
 
@@ -10,7 +10,7 @@ public class Exceptions {
         try {
             System.out.println(Calculator.div(4,0));
 
-            // Various Catches
+            // Various Catches (From most specific to the most general)
         } catch (ArrayIndexOutOfBoundsException e) {
 
         } catch (ArithmeticException e) {
