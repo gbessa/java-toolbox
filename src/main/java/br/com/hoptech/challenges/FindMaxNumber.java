@@ -1,11 +1,10 @@
 package br.com.hoptech.challenges;
 
-import java.security.InvalidParameterException;
 import java.util.List;
 
 public class FindMaxNumber {
 
-    public static int findMax_firstSolution(List<Integer> numbers) {
+    public static int findMaxFirstSolution(List<Integer> numbers) {
         int maxNumb = numbers.get(0);
         for (int number : numbers) {
             if (number > maxNumb) maxNumb = number;
@@ -13,9 +12,9 @@ public class FindMaxNumber {
         return maxNumb;
     }
 
-    public static int findMax(List<Integer> numbers) {
+    public Integer findMax(List<Integer> numbers) {
         return numbers.stream()
                 .reduce((acc, ele) -> acc > ele ? acc : ele)
-                .get();
+                .orElseThrow(IllegalArgumentException::new);
     }
 }

@@ -11,9 +11,9 @@ public class HtmlHandle {
 
 	boolean matchFound = false;
 	Pattern r = Pattern.compile("<(.+)>([^<]+)</\\1>");
-	// <(.+)>  Pega tag de início com qualquer conteúdo
+	// <(.+)>  Pega tag de inicio com qualquer conteudo
 	// ([^<]+) Pega qualquer conjunto de caracteres, exceto <
-	// </\\1>  Pega tag de fechamento, onde o tipo da TAB dê match com a tag de abertura
+	// </\\1>  Pega tag de fechamento, onde o tipo da TAB da match com a tag de abertura
 	
 	Matcher m = r.matcher(line);
 

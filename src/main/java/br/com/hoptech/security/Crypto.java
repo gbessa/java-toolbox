@@ -22,7 +22,7 @@ public class Crypto {
     
     public static String md5(String password) throws Exception {
 	
-	// Já foi quebrado e não deve mais ser usado
+	// Ja foi quebrado e nao deve mais ser usado
 	
 	MessageDigest m = MessageDigest.getInstance("MD5");
         m.update(password.getBytes(), 0, password.length());

@@ -35,8 +35,8 @@ public class DefaultMethods {
 	myList.sort(new ComparatorBySyze());
 	System.out.println(myList);	
 
-	//	O Sort é um método implementado na interface Set. Podemos fazer isso agora com o modificador Default
-	//	Se não fosse assim, e incluíssemos um método novo na interface List, todas as implementações dela iriam quebrar
+	//	O Sort e um metodo implementado na interface Set. Podemos fazer isso agora com o modificador Default
+	//	Se nao fosse assim, e incluissemos um metodo novo na interface List, todas as implementacoes dela iriam quebrar
 
 	//	@SuppressWarnings({"unchecked", "rawtypes"})
 	//	default void sort(Comparator<? super E> c) {

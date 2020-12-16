@@ -1,5 +1,5 @@
 package br.com.hoptech.soap;
-
+/*
 import io.spring.guides.gs_producing_web_service.GetCountryRequest;
 import io.spring.guides.gs_producing_web_service.GetCountryResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,3 +34,5 @@ public class CountryEndpoint {
     }
 
 }
+
+ */

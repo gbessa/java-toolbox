@@ -22,7 +22,7 @@ public class ApiDate {
 	Period periodo = Period.between(hoje, diaD);
 	System.out.println("Faltam: " + periodo.getMonths() + " meses e " + periodo.getDays() + " dias.");
 	
-	LocalDate depoisDeUmAno = diaD.plusYears(1); //Atribuimos, pois o localDate é imutavel
+	LocalDate depoisDeUmAno = diaD.plusYears(1); //Atribuimos, pois o localDate e imutavel
 	
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	
@@ -36,7 +36,7 @@ public class ApiDate {
 	System.out.println(mesDoAno);
 	
 	LocalTime horario = LocalTime.of(5, 10);
-	System.out.println("Horário: " + horario);
+	System.out.println("Horario: " + horario);
 	
 	
     }

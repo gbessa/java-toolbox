@@ -18,16 +18,16 @@ BUT, the version 14 is not LTS. The last LTS is the 11.
 public class Records {
 
     public static void main(String[] args) {
-        Person person1 = new Person("Gustavo", 1.78);
-        Person person2 = new Person("Gustavo", 1.78);
-
-        System.out.println(person1.equals(person2));
-        System.out.println(person1);
+//        Person person1 = new Person("Gustavo", 1.78);
+//        Person person2 = new Person("Gustavo", 1.78);
+//
+//        System.out.println(person1.equals(person2));
+//        System.out.println(person1);
 
     }
 }
 
-record Person (String name, double height) {}
+//record Person (String name, double height) {}
 
 
 

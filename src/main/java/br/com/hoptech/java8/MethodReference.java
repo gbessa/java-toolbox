@@ -34,9 +34,9 @@ public class MethodReference {
 	//AFTER
 	Function<Usuario, String> funcaoAfter = Usuario::getNome;
 	
-	//O method reference é essa forma de dizer qual classe e qual método você que executar
+	//O method reference a essa forma de dizer qual classe e qual metodo voce que executar
 	//O Java vai converter isso para uma Lambda function
-	//Isso é aplicável em casos simples como esses
+	//Isso e aplicavel em casos simples como esses
 	
     }
     

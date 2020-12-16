@@ -1,5 +1,6 @@
 package br.com.hoptech.soap;
 
+/*
 import io.spring.guides.gs_producing_web_service.Country;
 import io.spring.guides.gs_producing_web_service.Currency;
 import org.springframework.stereotype.Component;
@@ -52,3 +53,5 @@ public class CountryRepository {
     }
 
 }
+
+ */

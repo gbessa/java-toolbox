@@ -20,13 +20,13 @@ public class Streams {
 	
 	cursos.sort(Comparator.comparing(Curso::getAlunos));
 	
-	cursos.forEach(System.out::println); // Aqui tem uma limitação, pois ele só conseguiria dar print no toString da classe.
+	cursos.forEach(System.out::println); // Aqui tem uma limitacao, pois ele so conseguiria dar print no toString da classe.
 	cursos.forEach(c -> System.out.println(c.getNome())); // Ou implementamos o toString ou fazemos com Lambda mesmo
 	
-	/* Ao invés de colocarem um monte de novos métodos na interface List, foi implementado o stream(),
-	que retorna um stream de dados e no stream temos muitas novas opções de métodos
-	o filter não vai alterar a lista (imutabilidade), apenas o stream. Pois isso é que trabalhamos com o stream, após filtrá-lo
-	O stream também tem vantagens sobre o for padrão em termos de concorrrência e paralelismo */
+	/* Ao inves de colocarem um monte de novos mï¿½todos na interface List, foi implementado o stream(),
+	que retorna um stream de dados e no stream temos muitas novas opcoes de mï¿½todos
+	o filter nao vai alterar a lista (imutabilidade), apenas o stream. Pois isso e que trabalhamos com o stream, apos filtra-lo
+	O stream tambem tem vantagens sobre o for padrao em termos de concorrrencia e paralelismo */
 	
 	//FILTER
 	cursos.stream().filter(c -> c.getAlunos() >= 100).forEach(c -> System.out.println(c.getNome()));;
@@ -34,7 +34,7 @@ public class Streams {
 	//MAP
 	cursos.stream().map(c -> c.getAlunos()).forEach(System.out::println);
 	
-	//REDUCE e ENCADEAÇÃO (Vantagem também do stream é que podemos encadear - Interface Fluente)
+	//REDUCE e ENCADEACAO (Vantagem tambem do stream e que podemos encadear - Interface Fluente)
 	Optional<Integer> totalFinal = cursos.stream()
 		.filter(c -> c.getAlunos() >= 100)
 		.map(c -> c.getAlunos())
@@ -50,16 +50,16 @@ public class Streams {
         OptionalDouble media = cursos.stream()
 		.mapToInt(c -> c.getAlunos())
 		.average();
-        System.out.println("Média de Alunos por turma: " + media.getAsDouble());
+        System.out.println("Mï¿½dia de Alunos por turma: " + media.getAsDouble());
         
         
-        //O Optional tb é uma classe nova do Java 8, para trabalharmos melhor com o Null
+        //O Optional tb ï¿½ uma classe nova do Java 8, para trabalharmos melhor com o Null
         Optional<Curso> curso = cursos.stream()
         	.filter(c -> c.getAlunos() >= 100)
         	.findAny();
-        curso.ifPresent(System.out::println); //Nesse caso, só printa se tiver o curso, evitando o nullpointer exception
+        curso.ifPresent(System.out::println); //Nesse caso, sï¿½ printa se tiver o curso, evitando o nullpointer exception
         
-        //Como estamos alterando a Stream e não a lista, Temos que coletar os elementos da Stream para colocar em uma lista
+        //Como estamos alterando a Stream e nï¿½o a lista, Temos que coletar os elementos da Stream para colocar em uma lista
         cursos = cursos.stream()
         	.filter(c -> c.getAlunos() >= 100)
         	.collect(Collectors.toList());

@@ -10,18 +10,14 @@ Na média: O(n.log(n))
 Funcionamento: Encontrar o Pivot, executar recursivamente nas 2 sublistas e fazer o merge.
 Não é Stable, ou seja, pode trocar de posição valores iguais.
  */
-public class QuickSort {
+public class QuickSort implements Sorter {
 
-    public static void main(String[] args) {
-        int[] array = {3, 2, 4, 9, 4, 4, 4, 1, 8, 7, 6, 8, 10, 2, 1, 0, -4};
-        System.out.println(Arrays.toString(array));
-
-        int[] arraySorted = quickSort(array, 0, array.length-1);
-        System.out.println(Arrays.toString(arraySorted));
-
+    @Override
+    public int[] sort(int[] arr) {
+        return quickSort(arr, 0, arr.length-1);
     }
 
-    public static int[] quickSort(int arr[], int begin, int end) {
+    private int[] quickSort(int arr[], int begin, int end) {
         int[] arraySorted = arr;
         if (begin < end) {
             int pivotLocation = partition(arraySorted, begin, end);
@@ -52,5 +48,4 @@ public class QuickSort {
         arr[pos1] = arr[pos2];
         arr[pos2] = swapTemp;
     }
-
 }

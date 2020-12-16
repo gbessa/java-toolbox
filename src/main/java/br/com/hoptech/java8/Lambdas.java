@@ -16,9 +16,9 @@ public class Lambdas {
 	myList.add("04. four");
 	
 	/*BEFORE
-	Essa é uma forma de não precisarmor criar uma classe muito simples
+	Essa e uma forma de nao precisarmor criar uma classe muito simples
 	Criamos ela diretamente na passagem dela como parametro
-	Isso se chama Classe Anônima (chama-se anônima pois não demos nome para ela) */
+	Isso se chama Classe Anonima (chama-se anonima pois nao demos nome para ela) */
 	myList.sort(new Comparator<String>() {
 	    @Override
 	    public int compare(String s1, String s2) {
@@ -27,9 +27,9 @@ public class Lambdas {
 	});
 	
 	/*AFTER
-	Nesse caso o Java infere que o método escrito refere-se a implementação do compare(), 
-	pois o mesmo é obrigatório na implementação da classe, e seu comportamento é compatível.
-	Mas isso só funciona se a interface tiver apenas 1 método (chamados de Interface Funcional)
+	Nesse caso o Java infere que o metodo escrito refere-se a implementacao do compare(),
+	pois o mesmo e obrigatorio na implementacao da classe, e seu comportamento e compativel.
+	Mas isso so funciona se a interface tiver apenas 1 metodo (chamados de Interface Funcional)
 	*/
 	myList.sort((String s1, String s2) -> s1.length() - s2.length());
 	
@@ -43,7 +43,7 @@ public class Lambdas {
 	});
 	
 	/*AFTER
-	As arrow functions vieram simplificar esse código (como já tinha no JS) */
+	As arrow functions vieram simplificar esse cï¿½digo (como jï¿½ tinha no JS) */
 	myList.forEach(val -> System.out.println(val));
 	
 	
