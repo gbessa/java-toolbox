@@ -11,11 +11,11 @@ import org.mapstruct.factory.Mappers;
 public class MapStructUse {
 
     public static void main(String[] args) {
-        Car car = new Car( "Morris", 5, CarType.SEDAN );
+        //Car car = new Car( "Morris", 5, CarType.SEDAN );
 
-        CarDto carDto = CarMapper.INSTANCE.carToCarDto( car );
+        //CarDto carDto = CarMapper.INSTANCE.carToCarDto( car );
 
-        System.out.println(carDto);
+        //System.out.println(carDto);
     }
 
 }
@@ -56,12 +56,12 @@ class CarDto {
     }
 }
 
-@Mapper
-interface CarMapper {
-    CarMapper INSTANCE = Mappers.getMapper( CarMapper.class );
-
-    @Mapping(source = "numberOfSeats", target = "seatCount")
-    CarDto carToCarDto(Car car);
-}
+//@Mapper
+//interface CarMapper {
+//    CarMapper INSTANCE = Mappers.getMapper( CarMapper.class );
+//
+//    @Mapping(source = "numberOfSeats", target = "seatCount")
+//    CarDto carToCarDto(Car car);
+//}
 
 

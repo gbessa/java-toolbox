@@ -9,12 +9,12 @@ import org.modelmapper.ModelMapper;
 public class ModelMapperUse {
     public static void main(String[] args) {
 
-        Order order = new Order(new Customer(new Name("Gustavo", "Bessa")), new Address("Apple Street", "London"));
+        //Order order = new Order(new Customer(new Name("Gustavo", "Bessa")), new Address("Apple Street", "London"));
 
-        ModelMapper modelMapper = new ModelMapper();
-        OrderDTO orderDTO = modelMapper.map(order, OrderDTO.class);
+        //ModelMapper modelMapper = new ModelMapper();
+        //OrderDTO orderDTO = modelMapper.map(order, OrderDTO.class);
 
-        System.out.println(orderDTO.toString());
+        //System.out.println(orderDTO.toString());
 
     }
 }

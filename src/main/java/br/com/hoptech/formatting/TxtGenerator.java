@@ -24,8 +24,8 @@ public class TxtGenerator {
         serializer.write(company1);
         serializer.close(true);
 
-        log.info("Result:");
-        log.info(writer.toString());
+        //log.info("Result:");
+        //log.info(writer.toString());
 
     }
 

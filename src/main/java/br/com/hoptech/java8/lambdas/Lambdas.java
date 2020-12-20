@@ -1,10 +1,18 @@
-package br.com.hoptech.java8;
+package br.com.hoptech.java8.lambdas;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 
+/**
+ * Para podermos trabalhar como paradigma funcional no JAVA. Como a passagem de funções como parâmetro,
+ * foi criado no java 8 as funções lambda, que são na verdade Interfaces Funcionais que seguem o critério
+ * SAM (Single Abstract Method)
+ * Desta forma, passamos a passar funções como parâmetro e assim fazer uso da API de Streams,
+ * que é a base de grande parte da programação funcional com os foreach, map, filter, reduce, etc...
+ * Anotar uma classe como o @FunctionalIterface é opcional, mas ajuda a documentar e restringir nossas intefaces
+ */
 public class Lambdas {
 
     public static void main(String[] args) {
