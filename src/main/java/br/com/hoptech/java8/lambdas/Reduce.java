@@ -18,18 +18,25 @@ public class Reduce {
                 .reduce((n1, n2) -> n1 + n2)
                 .ifPresent(System.out::println);
 
-        // Reduce com Valor inicial (identity), não precisa mais retrornar Optional
+        /**
+         Reduce com Valor inicial (identity), não precisa mais retrornar Optional
+         Não irá precisar retornar optional, pois mesmo que a lista esteja vazia, ele retorna a identidade
+         */
         Integer result = list.stream()
                 .reduce(0, (n1, n2) -> n1 + n2);
         System.out.println(result);
 
-        // Reduce para concatenar Strings
+        /**
+         * Reduce para concatenar Strings
+         */
         list.stream()
                 .map(String::valueOf)
                 .reduce((n1, n2) -> n1.concat(n2))
                 .ifPresent(System.out::println);
 
-        // Reduce para concatenar Strings com Identiy
+        /**
+         * Reduce para concatenar Strings com Identity
+         */
         String strResult = list.stream()
                 .map(String::valueOf)
                 .reduce("Result: ", (n1, n2) -> n1.concat(n2));

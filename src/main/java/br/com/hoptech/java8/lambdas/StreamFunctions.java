@@ -6,40 +6,51 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * Operações Intermediárias (retornam nova Stream)
+ *
+ * - SKIP (pula a posição passada)
+ * - DISTINCT (elimina duplicados - usa equals)
+ * - FILTER (Predicate - return boolean)
+ * - MAP (Function - return generics)
+ * - LIMIT (limita a quantidade de elementos processados)
+ * - PEEK (debug, para executar alguma operação, sem alterar a lista, ex: um log de debug)
+ * - ...
+ *
+ *
+ * Operações Finais (finalizam a Stream)
+ *
+ * - FOREACH (Consumer - return void)
+ * - COUNT
+ * - MIN
+ * - MAX
+ * - COLLECT
+ * - ...
+ *
+ * COLLECTORS
+ *
+ * - toList
+ * - groupingBy (a chave do mapa será o retorno da Function passada para o groupingBy)
+ * - joining (concatena em uma String, evita o uso do StringBuilder)
+ *
+ *
+ */
 public class StreamFunctions {
 
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1, 2, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10, 10);
 
-        /**
-         * Operações Intermediárias (retornam nova Stream)
-         *
-         * SKIP (pula a posição passada)
-         * DISTINCT (elimina duplicados - usa equals)
-         * FILTER (Predicate - return boolean)
-         * MAP (Function - return generics)
-         * LIMIT (limita a quantidade de elementos processados)
-         * ...
-         */
         System.out.println("Operações Intermediárias");
         list.stream()
                 .skip(4)
                 .distinct()
                 .filter(e -> e % 2 == 0)
+                .peek((n) -> System.out.printf("Antes do Map => %d\n", n))
                 .map(e -> e * 10)
+                .peek((n) -> System.out.printf("Depois do Map => %d\n", n))
                 .limit(3)
                 .forEach(System.out::println);
 
-        /**
-         * Operações Finais (finalizam a Stream)
-         *
-         * FOREACH (Consumer - return void)
-         * COUNT
-         * MIN
-         * MAX
-         * COLLECT
-         * ...
-         */
         System.out.println("Operações Finais");
         System.out.println(list.stream().count());
         System.out.println(list.stream().min(Comparator.naturalOrder()).get());
@@ -48,14 +59,6 @@ public class StreamFunctions {
         System.out.println(newList);
 
 
-        /**
-         * Collectors
-         *
-         * toList
-         * groupingBy (a chave do mapa será o retorno da Function passada para o groupingBy)
-         * joining (concatena em uma String, evita o uso do StringBuilder)
-         * ...
-         */
         System.out.println("Colectors");
 
         List<Integer> collectedList = list.stream().distinct().collect(Collectors.toList());
