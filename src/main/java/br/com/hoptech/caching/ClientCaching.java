@@ -18,10 +18,14 @@ public class ClientCaching {
         String fooResourceUrl = "https://www.swapi.tech/api/planets/1";
         ResponseEntity<String> response;
 
-        runRequest(restConsumer, fooResourceUrl);
+        //runRequest(restConsumer, fooResourceUrl);
 
-        // WITH CACHING
-        // O RestTemplate não tem suporte a caching, mas ele aceita receber o HttpClient da Apache como parâmetro
+        //if (true) return;
+
+        /**
+         * with caching
+         * O RestTemplate não tem suporte a caching, mas ele aceita receber o HttpClient da Apache como parâmetro
+         */
         long cacheExpireInSeconds = 60;
         CacheConfig cacheConfig = CacheConfig
                 .custom().setHeuristicDefaultLifetime(cacheExpireInSeconds)
