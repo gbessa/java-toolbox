@@ -12,8 +12,6 @@ public class Util {
 	//ALTERANDO DATA
 	cal.set(2013, 11, 28);
 	
-	
-	
 	System.out.println(String.format("%tA", cal.getTime()).toUpperCase());
 	
     }
