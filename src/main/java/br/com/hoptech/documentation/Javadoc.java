@@ -1,7 +1,9 @@
 package br.com.hoptech.documentation;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.util.Calendar;
+import java.util.Date;
+
+import static java.util.Calendar.DAY_OF_MONTH;
 
 // This is a single line comment
 
@@ -32,6 +34,21 @@ public class Javadoc {
 
     public Javadoc() {}
     public Javadoc(String withParameter) {
+    }
+
+    /**
+     * Retorna a data enviada por parametro com a adição dos dias desejado
+     * 	a Data pode estar no futuro (dias > 0) ou no passado (dias < 0)
+     *
+     * @param data
+     * @param dias
+     * @return
+     */
+    public static Date adicionarDias(Date data, int dias) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(data);
+        calendar.add(DAY_OF_MONTH, dias);
+        return calendar.getTime();
     }
 
 }
