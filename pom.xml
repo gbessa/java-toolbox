@@ -14,10 +14,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.15</java.version>
 
-		<maven.compiler.source>1.15</maven.compiler.source>
-		<maven.compiler.target>1.15</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -163,6 +160,7 @@
 
 	<build>
 		<plugins>
+
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
@@ -181,7 +179,6 @@
 					</sources>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>

@@ -1,11 +1,13 @@
 package br.com.hoptech.tests.tdd;
 
+import br.com.hoptech.tests.runners.ParallelRunner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockedStatic;
 import org.mockito.MockitoAnnotations;
@@ -19,6 +21,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.when;
 
+@RunWith(ParallelRunner.class)
 class CalculatorTest {
 
     Calculator calc;

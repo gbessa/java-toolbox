@@ -41,7 +41,9 @@ public class Basis {
     }
 
     public static void printInJava8(List<String> list) {
-        list.stream().forEach((value) -> System.out.println(value));
+        list.stream().forEach(
+            (value) -> System.out.println(value)
+        );
     }
 
     public static void printInJava8MF(List<String> list) {
